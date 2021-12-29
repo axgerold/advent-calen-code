@@ -2,16 +2,15 @@ package com.company;
 
 import java.util.List;
 
-import static java.lang.Integer.parseInt;
-
 public class NavigationTool {
 
-    public static int[][] findSub(List imported_list) {
+    public static int[][] findSub(List imported_list, int is_aim_on) {
 
         int i = 0;
         int x = 0;
         int y = 0;
         int [][] location = new int[1][2];
+        int aim = 0;
 
         // check if undefined array is 0 or "null"/junk
 
@@ -24,13 +23,27 @@ public class NavigationTool {
 
             // given direction and distance, adjust location
             if (direction.contains("forward")) {
-                x = x + distance;
+                x += distance;
+                if (aim!=0 && is_aim_on==1) {
+                    y += aim * distance; // increases depth by aim * distance
+                }
+
             }
             else if (direction.contains("down")) {
-                y = y + distance;
+                if (is_aim_on==0) {
+                    y += distance;
+                }
+                if (is_aim_on==1) {
+                    aim += distance; // if including aim, depth doesn't change
+                }
             }
             else if (direction.contains("up")) {
-                y = y - distance;
+                if (is_aim_on==0) {
+                    y -= distance;
+                }
+                if (is_aim_on==1) {
+                    aim -= distance; // if including aim, depth doesn't change
+                }
             }
 
             i++;
