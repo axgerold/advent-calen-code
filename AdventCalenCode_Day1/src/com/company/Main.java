@@ -14,13 +14,14 @@ public class Main {
             DepthMeasurementClass depthMeasuringTool = new DepthMeasurementClass();
             FileReadingClass fileReader = new FileReadingClass();
 
-            // import example data
-            File example_file = new File("C:\\Users\\aimee_gerold\\IdeaProjects\\AdventCalenCode_Day1\\src\\example_data.txt");
-            List imported_example_list = fileReader.ImportFileSaveAsList(example_file);
+            // import data
+                String day = "1";
 
-            // import test case data
-            File test_case_file = new File("C:\\Users\\aimee_gerold\\IdeaProjects\\AdventCalenCode_Day1\\src\\test_case_data.txt");
-            List imported_test_case_list = fileReader.ImportFileSaveAsList(test_case_file);
+                File example_file = new File("C:\\Users\\aimee_gerold\\OneDrive - Edwards Lifesciences\\Documents\\GitHub\\advent-calen-code\\AdventCalenCode_Day" + day + "\\src\\example_data.txt");
+                List imported_example_list = fileReader.ImportFileSaveAsList(example_file);
+
+                File test_case_file = new File("C:\\Users\\aimee_gerold\\OneDrive - Edwards Lifesciences\\Documents\\GitHub\\advent-calen-code\\AdventCalenCode_Day" + day + "\\src\\test_case_data.txt");
+                List imported_test_case_list = fileReader.ImportFileSaveAsList(test_case_file);
 
             // run depth measurement tool
                 // example
