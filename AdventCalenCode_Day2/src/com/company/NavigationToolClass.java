@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.List;
 
-public class NavigationTool {
+public class NavigationToolClass {
 
     public static int[][] findSub(List imported_list, int is_aim_on) {
 

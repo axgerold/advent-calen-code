@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
         // initialize tool and file reader
-        NavigationTool toolInstance = new NavigationTool();
+        NavigationToolClass toolInstance = new NavigationToolClass();
         FileReadingClass fileReader = new FileReadingClass();
 
             String day = "2";

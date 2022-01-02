@@ -2,11 +2,8 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.io.FileNotFoundException;
 
-import static java.lang.Integer.parseInt;
-
-public class calculatePowerTool {
+public class PowerToolClass {
 
     public static int calculatePowerConsumption(List input_list) {
 
